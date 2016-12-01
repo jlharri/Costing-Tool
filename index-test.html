@@ -1,0 +1,79 @@
+<!-- Copyright @ 2011 Jerry Harris -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd" lang="en">
+<html lang="en">
+<head>
+    <title>Costing Estimation Tool</title>
+    
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    
+    <!-- load jquery libs -->
+    <script src="jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery/jquery-ui.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="jquery/jquery-ui.min.css" type="text/css" media="screen">
+
+    <!-- convert XML to JSON -->
+<!--    <script src="js/jquery.xml2json.js" type="text/javascript"></script> -->
+    <script src="js-min/jquery.xml2json-min.js" type="text/javascript"></script> 
+
+    <!-- load JSON2.js only for IE -->
+
+<![if IE]>
+    <script type="text/javascript" src="js-min/json2-min.js"></script> 
+<![endif]>
+
+    <!-- nicer tooltips -->
+    <script type="text/javascript" src="js-min/jquery.tools.min.js"></script>
+    
+    <!-- tab control -->
+    <script type="text/javascript" src="js-min/jquery.stepy-min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css-min/jquery.stepy-min.css" media="screen">
+    
+    <!-- nicer pulldown UI -->
+    <script type="text/javascript" src="js-min/jquery.linkselect-min.js"></script>
+    <link type="text/css" href="css-min/jquery.linkselect-min.css" rel="stylesheet" media="all" /> 
+    <script type="text/javascript" src="js-min/jquery.cookie-min.js"></script> 
+    
+    <!-- formula propagation -->
+    <script type="text/javascript" src="js-min/clientside_formula-min.js"></script>
+
+    <!-- UN-MINIFIED cost model code -->
+<!--    <script type="text/javascript" src="js/costModel.js"></script>
+    <link type="text/css" href="css/model-style.css" rel="stylesheet">
+-->    
+    
+    <!-- these do not need minimization -->
+    <script type="text/javascript" src="js/loadUIModel.js"></script>
+    <link type="text/css" href="css/print.css" rel="stylesheet" media="print" />
+    
+    <!-- MINIFIED cost model cost -->
+    <script type="text/javascript" src="js-min/costModel-min.js"></script>
+    <link type="text/css" href="css-min/model-style-min.css" rel="stylesheet">
+
+</head>
+<body>
+            <span style="border: groove;" title="Status">
+            <b>Test Status Pane:    </b>
+                <a href="clear-data-cache.html">Clear data cache</a> <a href="#" onclick='show_hidden();'>Show Hidden Elements</a> <span id="cachestat"></span>
+            </span>
+            <div id="loading" class="loadingcontainer">
+                <div class="loadingcontent">
+                    <p><b>Loading...</b><br><img src="images/loading_animation.gif"><br><b>Please wait.</b></p>
+                </div>
+            </div>
+            <form action="#" id="defaultForm">
+                <div id="tabs">
+ 		<input type="submit" onclick='window.print();' class="finish" value="Print"/>
+                </div>
+            </form><br>
+
+            <script type="text/javascript">
+                $("#cachestat").html( 'Cache is turned '+(gCacheOn ? "ON": "OFF"));
+                gLoadValues = true;
+                
+                $(function() {
+                    setTimeout("CreateUIForm('#tabs');", 1000);                    
+                });
+            </script>
+</body>
+</html>

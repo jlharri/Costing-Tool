@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<UIForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<UIElement>
+		<type>section</type>
+		<id>A1</id>
+		<text>Tab 1: Uptake of PMTCT Services, Population, and Program Protocols Information</text>
+                <textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Demographics</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>AA1</id>
+		<text>HIDDEN???Percentage of HIV-positive pregnant women not eligible for ART to receive Option B </text>
+		<textClass>hidden</textClass>
+                <inputClass>hidden</inputClass>
+                <calc>=A2*0.25</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A2</id>
+		<text>Number of births per year</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum</inputClass>
+                <help>Hi Ray</help>
+                <concat>yes</concat>
+	</UIElement>
+        <UIElement>
+                <type>numCalc</type>
+                <id>A222</id>
+                <text>Does it copy text</text>
+                <textClass>numCalc</textClass>
+                <inputClass>bigNum</inputClass>
+                <calc>=AA1</calc>
+        </UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Antiretroviral Drug Regimen Choices</text>
+                <textClass>normalBold</textClass>
+                <concat>yes</concat>
+        </UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Weekly Cost of Antiretroviral  Regimen Selected</text>
+                <textClass>largeBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A3</id>
+		<text>Enter the percentage of pregnant women who access antenatal care at least once or deliver at a health facility</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>.883</value>
+                <concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A4</id>
+		<text>Percentage of HIV-positive pregnant women who do not access ANC at least once</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<calc>=1-A3</calc>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>
+Note:
+In this section specify other training costs (cost per unit and quantity) to implement the revised PMTCT guidelines in the context for which this costing analysis is being conducted.  
+&lt;br&gt;
+Considerations:&lt;br&gt;
+• Potential trainings:  PMTCT counseling, testing, family planning methods for people living with HIV, ARV prophylaxis dispensation based on revised guidelines, infant and young child feeding in the context of HIV based on the revised WHO guidelines, CD4 testing and EID for laboratory staff on revised WHO guidelines, training for management/ pharmacy staff on logistics and supply chain management
+&lt;br&gt;
+• Considerations for deciding which trainings to hold:  total staff assigned to this area, current staff expertise, gaps, possibility for integration with other ongoing trainings/ refresher courses
+&lt;br&gt;
+• Considerations for costs associated with trainings: number of days, costs of venue, payment for trainers, travel, materials, certificates, per diem
+                </text>
+		<textClass>smallBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A5</id>
+		<text>Percentage of pregnant women who receive HIV testing in ANC and Labor and Delivery </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+	</UIElement>
+        <UIElement>
+		<type>select</type>
+		<text>Select from the drop down menu the most common maternal ART Regimen used in country and enter the weekly cost of the regimen selected.</text>
+		<textClass>numInput</textClass>
+		<inputClass>select</inputClass>
+                <concat>yes</concat>
+        </UIElement>
+        <UIElement>
+                <type>option</type>
+                <text>1. AZT (300mg) twice daily + 3TC (150 mg) twice daily + NVP (200mg) once daily</text>
+                <textClass>option</textClass>
+        </UIElement>
+        <UIElement>
+                <type>option</type>
+		<text>2. AZT (330mg) twice daily + 3TC (150mg) twice daily +EFV (600 mg) once daily</text>
+                <textClass>option</textClass>
+        </UIElement>
+        <UIElement>
+                <type>option</type>
+		<text>3. TDF (300 mg) once daily + 3TC (300 mg) once daily + EFV (600 mg) once daily</text>
+                <textClass>option</textClass>
+        </UIElement>
+        <UIElement>
+                <type>option</type>
+		<text>4. TDF (300 mg) once daily + FTC (200 mg) once daily + EFV (600 mg) once daily</text>
+                <textClass>option</textClass>
+        </UIElement>
+        <UIElement>
+                <type>option</type>
+		<text>5. TDF (300 mg) once daily + 3TC (150 mg) twice daily +NVP (200 mg) twice daily</text>
+                <textClass>option</textClass>
+        </UIElement>
+        <UIElement>
+                <type>option</type>
+		<text>6. TDF (300 mg) once daily + FTC (200 mg) once daily + NVP (200 mg) twice daily</text>
+                <textClass>option</textClass>
+	</UIElement>
+        <UIElement>
+                <type>endSelect</type>
+        </UIElement>
+	<UIElement>
+                <type>numInput</type>
+                <id>A55</id>
+                <text>Enter the cost of of the selected drug regimen</text>
+                <textClass>numInput</textClass>
+                <inputClass>smallNum</inputClass>
+        </UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A6</id>
+		<text>Percentage of pregnant women who test for HIV who receive HIV testing results</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+	</UIElement>
+        <UIElement>
+                <type>label</type>
+                <text>4.9c Enter the cost of the complete course of the infant Option A regimen for non-breastfeeding infants:&lt;br&gt;
+                • 0 to 6 weeks:  NVP (15 mg) once daily + 6 weeks to 6 months: NVP (20 mg) once daily + 6 months to 9 months:  NVP  (30 mg) once daily + 9 months to end of breastfeeding (40 mg) once daily</text>
+                <textClass>normalText</textClass>
+                <concat>yes</concat>
+        </UIElement>
+	<UIElement>
+                <type>numInput</type>
+                <id>A555</id>
+                <text>Enter the cost of of this drug regimen</text>
+                <textClass>numInput</textClass>
+                <inputClass>smallNum</inputClass>
+        </UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A7</id>
+		<text>Percentage of pregnant women living with HIV </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+	</UIElement>
+	<UIElement>
+                <type>select</type>
+		<text>What month is your favorite?</text>
+		<textClass>numInput</textClass>
+		<inputClass>select</inputClass>
+        </UIElement>
+        <UIElement>
+                <type>option</type>
+                <text>January</text>
+                <textClass>option</textClass>
+        </UIElement>
+        <UIElement>
+                <type>option</type>
+		<text>March</text>
+                <textClass>option</textClass>
+        </UIElement>
+        <UIElement>
+                <type>option</type>
+		<text>June</text>
+                <textClass>option</textClass>
+        </UIElement>
+        <UIElement>
+                <type>option</type>
+		<text>September</text>
+                <textClass>option</textClass>
+        </UIElement>
+        <UIElement>
+                <type>option</type>
+		<text>December (1.) longer longer longer + / $ longer longer longer #!# longer longer longer longerEND</text>
+                <textClass>option</textClass>
+        </UIElement>
+        <UIElement>
+                <type>endSelect</type>
+        </UIElement>
+        <UIElement>
+		<type>numInput</type>
+		<id>A8</id>
+		<text>Percentage of  pregnant women living with HIV who receive CD4 testing</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A9</id>
+		<text>Percentage of HIV-positive pregnant women eligible for ART </text>
+                <help>Note: Please note only once.</help>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+                <concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A10</id>
+		<text>Percentage of HIV-positive pregnant women not eligible for ART </text>
+		<textClass>calc</textClass>
+		<inputClass>percent</inputClass>
+		<calc>=1-A9</calc>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Other info</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A11</id>
+		<text>Percentage of HIV-positive pregnant women not eligible for ART to receive Option A</text>
+                <help>This is for Option A</help>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A12</id>
+		<text>Percentage of HIV-positive pregnant women not eligible for ART to receive Option B </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A13</id>
+		<text>Percentage of HIV-positive pregnant women eligible for ART who receive  ART </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A15</id>
+		<text>Percentage of HIV-positive pregnant women eligible for ART who do not receive  ART</text>
+		<textClass>calc</textClass>
+		<inputClass>percent</inputClass>
+		<calc>=1-A13</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A16</id>
+		<text>Infant mortality rate </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A17</id>
+		<text>Timing in weeks when early infant diagnosis usually occurs </text>
+                <help>Note: Timing is measured in weeks</help>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>A18</id>
+		<text>Average vertical transmission rate at 6-8 weeks</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Cost factors</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+        <UIElement>
+            <type>unitcost</type>
+            <id>C1</id>
+            <text>HIV rapid test</text>
+            <help>Default is 1.3b:  Number of pregnant women who receive HIV testing in antenatal care or labor and delivery</help>
+            <value>0</value>
+            <textClass>numInput</textClass>
+            <inputClass>smallNum</inputClass>
+        </UIElement>
+        <UIElement>
+            <type>unitcost</type>
+            <id>C2</id>
+            <text>CD4 test</text>
+            <value>0</value>
+            <textClass>numInput</textClass>
+            <inputClass>smallNum</inputClass>
+        </UIElement>
+        <UIElement>
+            <type>unitcost</type>
+            <id>C3</id>
+            <text>CD4 Reagents</text>
+            <value>0</value>
+            <textClass>numInput</textClass>
+            <inputClass>smallNum</inputClass>
+        </UIElement>
+        <UIElement>
+            <type>unitcost</type>
+            <id>C4</id>
+            <text>Hemoglobin test</text>
+            <value>0</value>
+            <textClass>numInput</textClass>
+            <inputClass>smallNum</inputClass>
+        </UIElement>
+        <UIElement>
+            <type>unitcost</type>
+            <id>C5</id>
+            <text>Other Commodities</text>
+            <help>Please Specify</help>
+            <value>0</value>
+            <textClass>numInput</textClass>
+            <inputClass>smallNum</inputClass>
+        </UIElement>
+        <UIElement>
+            <type>unitcost</type>
+            <id>C6</id>
+            <text>Other Commodities</text>
+            <help>Please Specify</help>
+            <value>0</value>
+            <textClass>numInput</textClass>
+            <inputClass>smallNum</inputClass>
+        </UIElement>
+        <UIElement>
+            <type>unitcost</type>
+            <id>C60</id>
+            <help>Please enter your own costs</help>
+            <value>0</value>
+            <textClass>numInput</textClass>
+            <inputClass>smallNum</inputClass>
+        </UIElement>
+        <UIElement>
+            <type>unitcost</type>
+            <id>C61</id>
+            <text></text>
+            <help>Please enter your own costs</help>
+            <value>0</value>
+            <textClass>numInput</textClass>
+            <inputClass>smallNum</inputClass>
+        </UIElement>
+        <UIElement>
+            <type>numCalc</type>
+            <id>C7</id>
+            <text>Subtotal: Commodities</text>
+            <textClass>calc</textClass>
+            <inputClass>bigNum</inputClass>
+            <calc>=C60+C61+SUM(C1:C6)</calc>
+        </UIElement>
+	<UIElement>
+		<type>section</type>
+		<id>A14</id>
+                <text>Other program costs</text>
+		<textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A19</id>
+		<text>Number of pregnant women who access ANC at least once</text>
+                <help>Note: Please note only once.</help>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+		<calc>=A2*A3</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A20</id>
+		<text>Number of HIV-positive pregnant women who do not access ANC at least once</text>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+		<calc>=A2*A4</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A21</id>
+		<text>Number of pregnant women who receive HIV testing in ANC and Labor and Delivery </text>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+		<calc>=A2*A5</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A22</id>
+		<text>Number of pregnant women who test for HIV who receive HIV testing results</text>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+		<calc>=A5*A6</calc>
+	</UIElement>
+	<UIElement>
+		<type>section</type>
+		<id>A14</id>
+                <text>Results/Costs Estimation</text>
+		<textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A23</id>
+		<text>Number of pregnant women living with HIV</text>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+		<calc>=A2*A7</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A24</id>
+		<text>Number of  pregnant women living with HIV who receive CD4 testing</text>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A25</id>
+		<text>Number of HIV-positive pregnant women eligible for ART </text>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A26</id>
+		<text>Number of HIV-positive pregnant women not eligible for ART to receive Option A</text>
+                <help>This is for Option A</help>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A27</id>
+		<text>Number of HIV-positive pregnant women not eligible for ART to receive Option B</text>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A28</id>
+		<text>Number of HIV-positive pregnant women eligible to receive ART who receive  ART</text>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A29</id>
+		<text>Number of HIV-positive pregnant women eligible for ART who do not receive  ART</text>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>A30</id>
+		<text>Number of infants that die each year </text>
+		<textClass>calc</textClass>
+		<inputClass>bigNum</inputClass>
+	</UIElement>
+</UIForm>

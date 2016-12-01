@@ -1,0 +1,1830 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<UIForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<UIElement>
+		<type>section</type>
+		<text>Uptake of PMTCT Services, Population, and Program Protocols Information</text>
+		<textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 1:  Uptake of the PMTCT cascade</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C5</id>
+		<text>1.1a  Enter the number of births per year </text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum</inputClass>
+		<value>100</value>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C6</id>
+		<text>1.2a  Enter the percentage of pregnant women who access antenatal care at least once or deliver at a health facility</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+		<help>Enter percent as decimal (ex, 0.5)</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G6</id>
+		<text>1.2b  Number of pregnant women who access ANC at least once  or deliver at a health facility</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=C5*C6</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C7</id>
+		<text>1.3a  Enter the percentage of pregnant women who receive HIV testing in antenatal care or labor and delivery </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G7</id>
+		<text>1.3b  Number of pregnant women who receive HIV testing in antenatal care or labor and delivery  </text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=C5*C6*C7</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C8</id>
+		<text>1.4a  Enter the percentage of pregnant women in antenatal care or labor and delivery who test for HIV and receive results</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G8</id>
+		<text>1.4b  Number of pregnant women in antenatal care or labor and delivery who test for HIV and receive results</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=C5*C6*C7*C8</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C9</id>
+		<text>1.5a  Enter the percentage of pregnant women who receive HIV test results that are positive</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+		<help>Note: the antenatal HIV prevalence can be used to estimate this value</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G9</id>
+		<text>1.5b  Number of pregnant women living with HIV who receive HIV positive test results</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=C5*C6*C7*C8*C9</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C10</id>
+		<text>1.6a  Enter the percentage of HIV-positive pregnant women eligible for ART </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.5</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G10</id>
+		<text>1.6a1  Number of HIV-positive pregnant women eligible for ART </text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G9*C10</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C11</id>
+		<text>1.6b  Enter the percentage of HIV-positive pregnant women eligible for ART that are already receiving ART in HIV care and treatment services</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.05</value>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G11</id>
+		<text>1.6b1  Percentage of HIV-positive pregnant women eligible for ART that will be newly initiated on ART</text>
+		<textClass>hidden</textClass>
+		<inputClass>percent hidden</inputClass>
+		<calc>=C10-C11</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C12</id>
+		<text>1.6c  Percentage of HIV-positive pregnant women not eligible for ART to receive ARV prophylaxis</text>
+		<textClass>hidden</textClass>
+		<inputClass>percent hidden</inputClass>
+		<calc>=1-C10</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G12</id>
+		<text>1.6e  Number of HIV-positive pregnant women not eligible for ART </text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=G9*C12</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C13</id>
+		<text>1.7a  Enter the percentage of HIV-positive pregnant women not eligible for ART to receive Option A</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.5</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G13</id>
+		<text>1.7b  Number of HIV-positive pregnant women not eligible for ART to receive Option A</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G12*C13</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C14</id>
+		<text>1.8a  Percentage of HIV-positive pregnant women not eligible for ART to receive Option B </text>
+		<textClass>numCalc</textClass>
+		<inputClass>percent</inputClass>
+		<calc>=1-C13</calc>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G14</id>
+		<text>1.8b  Number of HIV-positive pregnant women not eligible for ART to receive Option B</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G12*C14</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C15</id>
+		<text>1.9a  Enter the percentage of HIV-positive  pregnant women that receive intrapartum prophylaxis </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G15</id>
+		<text>1.9b  Number of HIV-positive pregnant women that receive intrapartum prophylaxis</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G9*C15</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C16</id>
+		<text>1.10a  Enter the percentage of HIV-positive pregnant women that will receive post-partum prophylaxis </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G16</id>
+		<text>1.10b  Number of HIV-positive pregnant women that will receive post-partum prophylaxis</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G9*C16</calc>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 2:  Timing of Antenatal HIV Diagnosis </text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C20</id>
+		<text>2.1a  Enter the earliest timing in weeks  (Timing 1) when pregnant women are diagnosed with HIV at antenatal care</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum</inputClass>
+		<value>14</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G20</id>
+		<text>2.1b  Weeks of antenatal ART or antenatal prophylaxis for women diagnosed with HIV at Timing 1</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=36-C20</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C21</id>
+		<text>2.2a  Enter the percentage of pregnant women diagnosed with HIV at antenatal care at Timing 1 (weeks specified in 2.1a)</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.25</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G21</id>
+		<text>2.2b  Number of pregnant women diagnosed with HIV at Timing 1 </text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=C21*G9</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C23</id>
+		<text>2.3a  Enter the second earliest timing in weeks (Timing 2) when pregnant women are diagnosed with HIV at antenatal care</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum</inputClass>
+		<value>20</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G23</id>
+		<text>2.3b  Weeks of antenatal ART or antenatal prophylaxis for women diagnosed with HIV at Timing 2</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=36-C23</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C24</id>
+		<text>2.4a  Enter the percentage of pregnant women diagnosed with HIV at antenatal care at Timing 2</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.25</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G24</id>
+		<text>2.4b  Number of pregnant women diagnosed with HIV at Timing 2</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G9*C24</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C26</id>
+		<text>2.5a  Enter the third earliest  timing in weeks (Timing 3) when pregnant women are diagnosed with HIV at antenatal care</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum</inputClass>
+		<value>28</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G26</id>
+		<text>2.5b  Weeks of antenatal ART or antenatal prophylaxis for women diagnosed with HIV at Timing 3</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=36-C26</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C27</id>
+		<text>2.6a  Enter the percentage of pregnant women diagnosed with HIV at antenatal care at Timing 3</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.25</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G27</id>
+		<text>2.6b  Number of pregnant women diagnosed with HIV at Timing 3</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G9*C27</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C29</id>
+		<text>2.7  Enter the percentage of the total population of pregnant women diagnosed with HIV at Labor </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.25</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G29</id>
+		<text>2.7b  Number of pregnant women diagnosed with HIV at Labor </text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=C29*G9</calc>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 3:  Demographic Information</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C33</id>
+		<text>3.1a  Enter the percentage of infants with a  birth weight between 2000-2499 g</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.5</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G33</id>
+		<text>3.1b  Number of infants with birthweight between 2000-2499 g</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=G9*C33</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C35</id>
+		<text>3.2a Percentage of infants with a birth weight &gt; 2499 g.</text>
+		<textClass>numCalc</textClass>
+		<inputClass>percent</inputClass>
+		<calc>=1-C33</calc>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G35</id>
+		<text>3.2b  Number of infants with a  birthweight &gt; 2499 g </text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=G9-G33</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C37</id>
+		<text>3.3a  Enter the percentage of women receiving antiretroviral prophylaxis or treatment that exclusively breastfeed their infants</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.9</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G37</id>
+		<text>3.3b  Percentage of women receiving antiretroviral prophylaxis or treatment that exclusively replacement feed their infants</text>
+		<textClass>numCalc</textClass>
+		<inputClass>percent</inputClass>
+		<calc>=1-C37</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C39</id>
+		<text>3.4 Enter the average duration of breastfeeding (in weeks) </text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 4:  Program Protocols and Antiretroviral Drug Regimens and Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Program Protocols</text>
+		<textClass>largeBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C46</id>
+		<text>4.1a  Enter the average amount of time in weeks that it takes between diagnosis and the start of ART (waiting period for ART)</text>
+		<inputClass>smallNum</inputClass>
+		<value>1</value>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C47</id>
+		<text>4.2a  Enter the average amount of time in weeks that it takes between diagnosis and the start of Option A (waiting period for Option A)</text>
+		<inputClass>smallNum</inputClass>
+		<value>1</value>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C48</id>
+		<text>4.3a  Enter the average amount of time in weeks that it takes between diagnosis and the start of Option B (waiting period for Option B)</text>
+		<inputClass>smallNum</inputClass>
+		<value>1</value>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C49</id>
+		<text>4.4  Enter the duration in weeks of post-partum ART covered under the PMTCT program for women eligible for ART</text>
+		<inputClass>smallNum</inputClass>
+		<value>24</value>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Maternal ART</text>
+		<textClass>largeBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Antiretroviral Drug Regimen Choices</text>
+		<textClass>normalBold</textClass>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Weekly Cost of Antiretroviral  Regimen Selected</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>select</type>
+		<text>4.5a  Select from the drop down menu the most common maternal ART Regimen used in country and enter the weekly cost of the regimen selected.</text>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>1. AZT (300mg) twice daily + 3TC (150 mg) twice daily + NVP (200mg) once daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>2. AZT (330mg) twice daily +3TC (150mg) twice daily +EFV (600 mg) once daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>3. TDF (300 mg) once daily + 3TC (300 mg) once daily + EFV (600 mg) once daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>4. TDF (300 mg) once daily + FTC (200 mg) once daily + EFV (600 mg) once daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>5. TDF (300 mg) once daily + 3TC (150 mg) twice daily +NVP (200 mg) twice daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>6. TDF (300 mg) once daily + FTC (200 mg) once daily + NVP (200 mg) twice daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>endSelect</type>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G54</id>
+		<text>Enter the cost for this regimen.</text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>2</value>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>K54</id>
+		<text>4.5b  Enter the percentage of pregnant women eligible for ART that will receive this ART regimen.</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.5</value>
+	</UIElement>
+	<UIElement>
+		<type>select</type>
+		<text>4.5c  Select from the drop down menu the second most common maternal ART Regimen used in country and enter the weekly cost of the regimen selected.</text>
+		<textClass>numInput</textClass>
+		<inputClass>select</inputClass>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>1. AZT (300mg) twice daily + 3TC (150 mg) twice daily + NVP (200mg) once daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>2. AZT (330mg) twice daily +3TC (150mg) twice daily +EFV (600 mg) once daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>3. TDF (300 mg) once daily + 3TC (300 mg) once daily + EFV (600 mg) once daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>4. TDF (300 mg) once daily + FTC (200 mg) once daily + EFV (600 mg) once daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>5. TDF (300 mg) once daily + 3TC (150 mg) twice daily +NVP (200 mg) twice daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>6. TDF (300 mg) once daily + FTC (200 mg) once daily + NVP (200 mg) twice daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>endSelect</type>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G55</id>
+		<text>Enter the cost for this regimen.</text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>2</value>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>K55</id>
+		<text>4.5d  Enter the percentage of pregnant women eligible for ART that will receive this ART regimen.</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.5</value>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Maternal Prophylaxis Option A</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G57</id>
+		<text>4.6a  Enter the weekly cost of the maternal antenatal Option A regimen: AZT (300 mg) twice daily</text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>2</value>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G58</id>
+		<text>4.6b  Enter the cost of the maternal intra-partum Option A regimen: sd-NVP at onset of labor and AZT+3TC during labor and delivery    </text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>2</value>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G59</id>
+		<text>4.6c  Enter the cost of the maternal post-partum Option A regimen: AZT + 3TC for 7 days   </text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>1</value>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Maternal Prophylaxis Option B</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>select</type>
+		<text>4.7  Select from the drop down menu the maternal Option B regimen used in country and enter the weekly cost of the regimen selected.</text>
+		<textClass>numInput</textClass>
+		<inputClass>select</inputClass>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>1. AZT (300mg) twice daily + 3TC (150mg) twice daily + LPV/r 400/100 (mg) twice daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>2. AZT (300mg) twice daily + 3TC (150mg) twice daily + ABC (300 mg) twice daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>3. AZT (300mg) twice daily + 3TC (150 mg) twice daily + EFV (600 mg) once daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>4. TDF (300 mg) once daily + 3TC (150 mg) twice daily  + EFV (600 mg) once daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>5. TDF (300 mg) once daily + FTC (200 mg) once daily  + EFV (600 mg) once daily</text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>endSelect</type>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G61</id>
+		<text>Enter the cost for this regimen.</text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>2</value>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Infant Prophylaxis (birthweight between 2000-2499g)</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>select</type>
+		<text>4.8a  Select from the drop down menu the infant prophylaxis regimen for Maternal ART or Option B all exposed infants and enter the cost of the complete course of the regimen selected.</text>
+		<textClass>numInput</textClass>
+		<inputClass>select</inputClass>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>1. Birth to 6 weeks: NVP (10 mg)once daily if birth weight 2000-2499 g) </text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>2. Birth to 6 weeks: AZT (10 mg) twice daily if birth weight 2000-2499 g) </text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>endSelect</type>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G63</id>
+		<text>Enter the cost for this regimen.</text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>2</value>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G64</id>
+		<text>4.8b  Enter the cost of the complete course of the infant Option A regimen for breast-feeding infants in accordance with the duration of breastfeeding specified in 3.4 0 to 6 weeks:  NVP (10 mg) once daily + 6 weeks to 6 months: NVP (20 mg) once daily + 6 months to 9 months:  NVP  (30 mg) once daily + 9 months until one week following cessation of breastfeeding NVP (40 mg) once daily</text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>2</value>
+	</UIElement>
+	<UIElement>
+		<type>select</type>
+		<text>4.8c  Select from the drop down menu the infant Option A regimen for non-breastfeeding infants and enter the cost of the complete course of the regimen selected.</text>
+		<textClass>numInput</textClass>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>1. Birth to 6 weeks: NVP (10 mg)once daily if birth weight 2000-2499 g) </text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>2. Birth to 6 weeks:  AZT (10 mg) twice daily if birth weight 2000-2499 g) </text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>endSelect</type>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G65</id>
+		<text>Enter the cost for this regimen.</text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>2</value>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Infant Prophylaxis (birthweight &gt;2499g)</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>select</type>
+		<text>4.9a  Select from the drop down menu the infant prophylaxis regimen for Maternal ART or Option B all exposed infants and enter the cost of the complete course of the regimen selected.</text>
+		<textClass>numInput</textClass>
+		<inputClass>select</inputClass>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>1. Birth to 6 weeks:  NVP (15 mg) once daily if birth weight    &gt; 2499 g) </text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>2. Birth to 6 weeks:  AZT (15 mg) twice daily if birth weight    &gt; 2499 g) </text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>endSelect</type>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G68</id>
+		<text>Enter the cost for this regimen.</text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>2</value>
+	</UIElement>
+	<UIElement>
+		<type>select</type>
+		<text>4.9b  Enter the cost of the complete course of the infant Option A regimen for breast-feeding infants in accordance with the duration of breastfeeding specified in 3.4 </text>
+		<textClass>numInput</textClass>
+		<inputClass>select</inputClass>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>1. Birth to 6 weeks:  NVP (15 mg) once daily if birth weight    &gt; 2499 g) </text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>option</type>
+		<text>2. Birth to 6 weeks:  AZT (15 mg) twice daily if birth weight    &gt; 2499 g) </text>
+		<textClass>option</textClass>
+	</UIElement>
+	<UIElement>
+		<type>endSelect</type>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G69</id>
+		<text>Enter the cost for this regimen.</text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>10</value>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>G70</id>
+		<text>4.9c Enter the cost of the complete course of the infant Option A regimen for non-breastfeeding infants. 0 to 6 weeks:  NVP (15 mg) once daily + 6 weeks to 6 months: NVP (20 mg) once daily + 6 months to 9 months:  NVP  (30 mg) once daily + 9 months to end of breastfeeding (40 mg) once daily</text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<value>2</value>
+	</UIElement>
+	<UIElement>
+		<type>section</type>
+		<text>Other Program Costs</text>
+		<textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 5:  Commodities</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>In this section specify commodities (cost per unit and quantity) necessary to implement the revised PMTCT guidelines in the context for which this costing estimation analysis is being conducted.  Some suggestions are included, which can be modified or replaced as necessary in accordance with context specific scale-up needs.</text>
+		<textClass>smallBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Commodity</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E79</id>
+		<text>5.1  HIV rapid test                                          </text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E80</id>
+		<text>5.2  CD4 test</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E81</id>
+		<text>5.3  CD4 Reagents</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E82</id>
+		<text>5.4  Hemoglobin test</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E83</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other commodity</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E84</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other commodity</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E85</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other commodity</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E86</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other commodity</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E87</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other commodity</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E88</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other commodity</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>E89</id>
+		<text>Subtotal Commodity Costs</text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=SUM(E79:E88)</calc>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 6:  Equipment</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>In this section specify equipment (cost per unit and quantity) necessary to implement the revised PMTCT guidelines in the context for which this costing estimation analysis is being conducted.  Some suggestions are included, which can be modified or replaced as necessary in accordance with context specific scale up needs.</text>
+		<textClass>smallBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Equipment</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E96</id>
+		<text>6.1  CD4 Machine</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E97</id>
+		<text>6.2  CD4 Point of Care Machine</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E98</id>
+		<text>6.3  Hemoglobinometer</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E99</id>
+		<text>6.4  Vehicle</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E100</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other equipment</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E101</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other equipment</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E102</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other equipment</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E103</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other equipment</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E104</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other equipment</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E105</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other equipment</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>E106</id>
+		<text>Subtotal Equipment Costs</text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=SUM(E96:E105)</calc>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 7:  Supplies</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>In this section specify supplies (cost per unit and quantity) necessary to implement the revised PMTCT guidelines in the context for which this costing analysis is being conducted.  Some suggestions are included.  Some suggestions are included, which can be modified or replaced as necessary in accordance with context specific scale up needs.</text>
+		<textClass>smallBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Supply</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E111</id>
+		<text>7.1  Stablizer tubes (blood collection for CD4)</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E112</id>
+		<text>7.2  Infant Feeding Commodities</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E113</id>
+		<text>7.3  Infant PCR Testing</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E114</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other supply</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E115</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other supply</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E116</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other supply</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E117</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other supply</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E118</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other supply</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E119</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other supply</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E120</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other supply</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>E121</id>
+		<text>Subtotal Supplies Cost</text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=SUM(E111:E120)</calc>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 8:  Other direct costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>In this section specify other direct costs (cost per unit and quantity) to implement the revised PMTCT guidelines in the context for which this costing analysis is being conducted.  Some suggestions are included.  Some suggestions are included, which can be modified or replaced as necessary in accordance with context specific scale up needs.</text>
+		<textClass>smallBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Other Direct Cost</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E126</id>
+		<text>8.1  Vehicle Fuel</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E127</id>
+		<text>8.2  Vehicle Insurance</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E128</id>
+		<text>8.3  Vehicle Maintenance</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E129</id>
+		<text>8.4  IEC Materials</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E130</id>
+		<text>8.5  Community Sensatization</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E131</id>
+		<text>8.6  Printing of Revised National Guidelines</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E132</id>
+		<text>8.7  Printing of Revised registries</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E133</id>
+		<text>8.8  Printing of revised job aides</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E134</id>
+		<text>8.9  Renovation of clinics</text>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E135</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other direct</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E136</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other direct</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E137</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other direct</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E138</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other direct</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E139</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other direct</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E140</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other direct</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>E141</id>
+		<text>Subtotal Other Direct Costs</text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=SUM(E126:E140)</calc>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 9:  Personnel</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>In this section specify other personnel costs (cost per unit and quantity) to implement the revised PMTCT guidelines in the context for which this costing analysis is being conducted.Considerations:• What additional staff are needed in the context of implementing the revised guidelines?• Evaluate status of current staffing and gaps:o Public health officers, Nurses, Midwives, Dispensers, Laboratory Technicians, Health Information Assistants, Counselors</text>
+		<textClass>smallBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Personnel Costs</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E146</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other personnel</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E147</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other personnel</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E148</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other personnel</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E149</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other personnel</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E150</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other personnel</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E151</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other personnel</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E152</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other personnel</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E153</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other personnel</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E154</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other personnel</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E155</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other personnel</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>E156</id>
+		<text>Subtotal Personnel Costs</text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=SUM(E146:E155)</calc>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 10:  Training</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Note: In this section specify other training costs (cost per unit and quantity) to implement the revised PMTCT guidelines in the context for which this costing analysis is being conducted.Considerations:• Potential trainings:  PMTCT counseling, testing, family planning methods for people living with HIV, ARV prophylaxis dispensation based on revised guidelines, infant and young child feeding in the context of HIV based on the revised WHO guidelines, CD4 testing and EID for laboratory staff on revised WHO guidelines, training for management/ pharmacy staff on logistics and supply chain management• Considerations for deciding which trainings to hold:  total staff assigned to this area, current staff expertise, gaps, possibility for integration with other ongoing trainings/ refresher courses• Considerations for costs associated with trainings: number of days, costs of venue, payment for trainers, travel, materials, certificates, per diem</text>
+		<textClass>smallBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Training Costs</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E161</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other trainings</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E162</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other trainings</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E163</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other trainings</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E164</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other trainings</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E165</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other trainings</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E166</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other trainings</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E167</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other trainings</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E168</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other trainings</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E169</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other trainings</help>
+	</UIElement>
+	<UIElement>
+		<type>unitcost</type>
+		<id>E170</id>
+		<textClass>numInput</textClass>
+		<inputClass>smallNum currency</inputClass>
+		<help>Please specify other trainings</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>E171</id>
+		<text>Subtotal Training Costs</text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=SUM(E161:E170)</calc>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>Hidden Cost Calculations</text>
+		<textClass>hidden</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C213</id>
+		<text>Regimen 1</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G21*G11)*(G20-C46)*G54*K54</calc>
+		<help>Antenatal ART for women diagnosed at Timing 1</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C214</id>
+		<text>Regimen 2</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G21*G11)*(G20-C46)*G55*K55</calc>
+		<help>ditto</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C216</id>
+		<text>Regimen 1</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G24*G11)*(G23-C46)*G54*K54</calc>
+		<help>Antenatal ART for women diagnosed at Timing 2</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C217</id>
+		<text>Regimen 2</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G24*G11)*(G23-C46)*G55*K55</calc>
+		<help>ditto</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C219</id>
+		<text>Regimen 1</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G27*G11)*(G26-C46)*G54*K54</calc>
+		<help>Antenatal ART for women diagnosed at Timing 3</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C220</id>
+		<text>Regimen 2</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G27*G11)*(G26-C46)*G55*K55</calc>
+		<help>ditto</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C222</id>
+		<text>Regimen 1</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G29*G11)*(C49-C46)*G54*K54</calc>
+		<help>Post-Natal ART for women diagnosed at L&amp;D</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C223</id>
+		<text>Regimen 2</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G29*G11)*(C49-C46)*G55*K55</calc>
+		<help>ditto</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C225</id>
+		<text>Regimen 1</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=((G21+G24+G27)*G11)*C49*G54*K54</calc>
+		<help>Post-Natal Maternal ART Costs for women diagnosed at Timings 1, 2, and 3</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C226</id>
+		<text>Regimen 2</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=((G21+G24+G27)*G11)*C49*G55*K55</calc>
+		<help>ditto</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C227</id>
+		<text>Total Maternal ART Components</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=SUM(C213:C226)</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C230</id>
+		<text>Antenatal Option A for women diagnosed at Timing 1</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G21*C12*C13)*(G20-C47)*G57</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C231</id>
+		<text>Antenatal Option A for women diagnosed at Timing 2</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G24*C12*C13)*(G23-C47)*G57</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C232</id>
+		<text>Antenatal Option A for women diagnosed at Timing 3</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G27*C12*C13)*(G26-C47)*G54</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C233</id>
+		<text>Intra-partum Option A</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G21+G24+G27+G29)*C12*C13*C15*G58</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C234</id>
+		<text>Post-Partum Option A</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G29+G27+G24+G21)*C14*C13*C16*G59</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C235</id>
+		<text>Total Maternal Option A</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=SUM(C230:C234)</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C238</id>
+		<text>Antenatal Option B for women diagnosed at Timing 1</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G21*C12*C14)*(G20-C48)*G61</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C239</id>
+		<text>Antenatal Option B for women diagnosed at Timing 2</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G24*C12*C14)*(G23-C48)*G61</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C240</id>
+		<text>Antenatal Option B for women diagnosed at Timing 3</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G27*C12*C14)*(G26-C48)*G61</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C241</id>
+		<text>Post-Partum Option B/ Breastfeeding </text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G29+G27+G24+G21)*C12*C14*C37*C39*G61</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C242</id>
+		<text>Total Maternal Option B</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=SUM(C238:C241)</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C245</id>
+		<text>Infants with birthweight between 2000-2499 g</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G9*G11)*C33*G63</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C246</id>
+		<text>Infants with birthweight               &gt; 2499 g</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G9*G11)*C35*G68</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C247</id>
+		<text>Total Infant Prophylaxis Maternal ART</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=C245+C246</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C249</id>
+		<text>Infant Prophylaxis Option A (Breastfeeding) (birth weight between 2000-2499 g)</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=G13*C33*G64</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C250</id>
+		<text>Infant Prophylaxis Option A (Breastfeeding) (birth weight  &gt; 2499 g)    </text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=G13*C35*G69</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C251</id>
+		<text>Infant Prophylaxis Option A (Non- Breastfeeding) (birth weight between 2000-2499 g)</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G13*C33)*G37*G65</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C252</id>
+		<text>Infant Prophylaxis Option A (Non- Breastfeeding) (birthweight &gt; 2499 g)</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G13*C35)*G37*G65</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C253</id>
+		<text>Total Infant Prophylaxis Option A </text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=SUM(C249:C252)</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C256</id>
+		<text>Infant Prophylaxis Option B  (birth weight between 2000-2499 g)</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G14*C33)*G63</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C257</id>
+		<text>Infant Prophylaxis Option B  (birthweight &gt; 2499 g)</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=(G14*C35)*G68</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C258</id>
+		<text>Total Infant Prophylaxis Option B</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=C256+C257</calc>
+	</UIElement>
+	<UIElement>
+		<type>section</type>
+		<text>Results/ Cost Estimation</text>
+		<textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Results</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>A.  Drug Costs</text>
+		<textClass>largeBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>A.1  Maternal Prophyalxis and ART</text>
+		<textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C177</id>
+		<text>A.1.1  Maternal ART</text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=C227</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C178</id>
+		<text>A.1.2  Maternal Option A </text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=C235</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C179</id>
+		<text>A.1.3  Maternal Option B</text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=C242</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C180</id>
+		<text>Total Maternal Prophylaxis and ART</text>
+		<textClass>numCalc yellow</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=SUM(C177:C179)</calc>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>A.2   Infant Prophylaxis</text>
+                <textClass>normalBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C183</id>
+		<text>A.2.1 Infant Prophylaxis Maternal ART </text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=C247</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C184</id>
+		<text>A.2.2  Infant Prophylaxis Option A</text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=C253</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C185</id>
+		<text>A.2.3  Infant Prophylaxis Option B</text>
+		<textClass>numCalc</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=C258</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C186</id>
+		<text>Total Infant Prophylaxis </text>
+		<textClass>numCalc yellow</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=SUM(C183:C185)</calc>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>B.  Commodity</text>
+		<textClass>largeBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C188</id>
+		<text>Total Commodity Costs</text>
+		<textClass>numCalc yellow</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=E89</calc>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>C.  Equipment</text>
+		<textClass>largeBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C190</id>
+		<text>Total Equipment Costs</text>
+		<textClass>numCalc yellow</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=E106</calc>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>D.  Supply</text>
+		<textClass>largeBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C192</id>
+		<text>Total Supply Costs</text>
+		<textClass>numCalc yellow</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=E121</calc>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>E.  Other Direct</text>
+		<textClass>largeBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C194</id>
+		<text>Total Other Direct Costs</text>
+		<textClass>numCalc yellow</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=E141</calc>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>F.  Personnel</text>
+		<textClass>largeBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C196</id>
+		<text>Total Personnel Costs</text>
+		<textClass>numCalc yellow</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=E156</calc>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text>G.  Training</text>
+		<textClass>largeBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C198</id>
+		<text>Total Training Costs</text>
+		<textClass>numCalc yellow</textClass>
+		<inputClass>bigNum currency</inputClass>
+		<calc>=E171</calc>
+	</UIElement>
+	<UIElement>
+		<type>label</type>
+		<text></text>
+		<textClass>largeBold</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C202</id>
+		<text>Grand Total</text>
+		<textClass>numCalc largeBold</textClass>
+		<inputClass>bigNum currency orange</inputClass>
+		<calc>=C198+C196+C194+C192+C190+C188+C186+C180</calc>
+	</UIElement>
+</UIForm>

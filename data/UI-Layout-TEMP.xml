@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<UIForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<UIElement>
+		<type>section</type>
+		<text>Uptake of PMTCT Services, Population, and Program Protocols Information</text>
+		<textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 1:  Uptake of the PMTCT cascade</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C5</id>
+		<text>1.1a  Enter the number of births per year </text>
+		<textClass>numInput</textClass>
+		<inputClass>bigNum</inputClass>
+		<value>100</value>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C6</id>
+		<text>1.2a  Enter the percentage of pregnant women who access antenatal care at least once or deliver at a health facility</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+		<help>Enter percent as decimal (ex, 0.5)</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G6</id>
+		<text>1.2b  Number of pregnant women who access ANC at least once  or deliver at a health facility</text>
+		<textClass>numCalc</textClass>
+		<inputClass>percent</inputClass>
+		<calc>=C5*C6</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C7</id>
+		<text>1.3a  Enter the percentage of pregnant women who receive HIV testing in antenatal care or labor and delivery </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G7</id>
+		<text>1.3b  Number of pregnant women who receive HIV testing in in antenatal care or labor and delivery  </text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=C5*C6*C7</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C8</id>
+		<text>1.4a  Enter the percentage of pregnant women in antenatal care or labor and delivery who test for HIV and receive results</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G8</id>
+		<text>1.4b  Number of pregnant women in antenatal care or labor and delivery who test for HIV and receive results</text>
+		<textClass>numCalc</textClass>
+		<inputClass>percent</inputClass>
+		<calc>=C5*C6*C7*C8</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C9</id>
+		<text>1.5a  Enter the percentage of pregnant women who receive HIV test results that are positive</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+		<help>Note: the antenatal HIV prevalence can be used to estimate this value</help>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G9</id>
+		<text>1.5b  Number of pregnant women living with HIV who receive HIV positive test results</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=C5*C6*C7*C8*C9</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C10</id>
+		<text>1.6a  Enter the percentage of HIV-positive pregnant women eligible for ART </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.5</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G10</id>
+		<text>1.6a1  Number of HIV-positive pregnant women eligible for ART </text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G9*C10</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C11</id>
+		<text>1.6b  Enter the percentage of HIV-positive pregnant women eligible for ART that are already receiving ART in HIV care and treatment services</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.05</value>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G11</id>
+		<text>1.6b1  Percentage of HIV-positive pregnant women eligible for ART that will be newly initiated on ART</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=C10-C11</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C12</id>
+		<text>1.6c  Percentage of HIV-positive pregnant women not eligible for ART to receive ARV prophylaxis</text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=1-C10</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G12</id>
+		<text>1.6e  Number of HIV-positive pregnant women not eligible for ART </text>
+		<textClass>hidden</textClass>
+		<inputClass>hidden</inputClass>
+		<calc>=G9*C12</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C13</id>
+		<text>1.7a  Enter the percentage of HIV-positive pregnant women not eligible for ART to receive Option A</text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>0.5</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G13</id>
+		<text>1.7b  Number of HIV-positive pregnant women not eligible for ART to receive Option A</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G12*C13</calc>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>C14</id>
+		<text>1.8a  Enter the percentage of HIV-positive pregnant women not eligible for ART to receive Option B </text>
+		<textClass>numCalc</textClass>
+		<inputClass>percent</inputClass>
+		<calc>=1-C13</calc>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G14</id>
+		<text>1.8b  Number of HIV-positive pregnant women not eligible for ART to receive Option B</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G12*C14</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C15</id>
+		<text>1.9a  Enter the percentage of HIV-positive  pregnant women that receive intrapartum prophylaxis </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G15</id>
+		<text>1.9b  Number of HIV-positive pregnant women that receive intrapartum prophylaxis</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G9*C15</calc>
+	</UIElement>
+	<UIElement>
+		<type>numInput</type>
+		<id>C16</id>
+		<text>1.10a  Enter the percentage of HIV-positive pregnant women that will receive post-partum prophylaxis </text>
+		<textClass>numInput</textClass>
+		<inputClass>percent</inputClass>
+		<value>1</value>
+		<concat>yes</concat>
+	</UIElement>
+	<UIElement>
+		<type>numCalc</type>
+		<id>G16</id>
+		<text>1.10b  Number of HIV-positive pregnant women that will receive post-partum prophylaxis</text>
+		<textClass>numCalc</textClass>
+		<inputClass>smallNum</inputClass>
+		<calc>=G9*C16</calc>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 2:  Timing of Antenatal HIV Diagnosis </text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 3:  Demographic Information</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 4:  Program Protocols and Antiretroviral Drug Regimens and Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>section</type>
+		<text>Other Program Costs</text>
+		<textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 5:  Commodities</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 6:  Equipment</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 7:  Supplies</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 8:  Other direct costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 9:  Personnel</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 10:  Training</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>section</type>
+		<text>Results/ Cost Estimation</text>
+		<textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>A.  Drug Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>B.  Commodity Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>C.  Equipment Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>D.  Supply Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>E.  Other Direct Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>F.  Personnel Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>G.  Training Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+</UIForm>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<UIForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<UIElement>
+		<type>section</type>
+		<text>Uptake of PMTCT Services, Population, and Program Protocols Information</text>
+                <textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 1:  Uptake of the PMTCT cascade</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 2:  Timing of Antenatal HIV Diagnosis</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 3:  Demographic Information</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 4:  Program Protocols and Antiretroviral Drug Regimens and Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>section</type>
+		<text>Other Program Costs</text>
+                <textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 5:  Commodities</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 6:  Equipment</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 7:  Supplies</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 8:  Other direct costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 9:  Personnel</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>Section 10:  Training</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>section</type>
+		<text>Results/ Cost Estimation</text>
+                <textClass>section</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>A.  Drug Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>B.  Commodity Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>C.  Equipment Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>D.  Supply Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>E.  Other Direct Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>F.  Personnel Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
+	<UIElement>
+		<type>subsection</type>
+		<text>G.  Training Costs</text>
+		<textClass>subsection</textClass>
+	</UIElement>
