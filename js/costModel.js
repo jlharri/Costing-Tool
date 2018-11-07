@@ -519,7 +519,8 @@ function setup_part2() {
     });
     
     // activate tooltip
-    $(".help, img[title]").tooltip({position: 'top right', opacity: 0.7});
+    // -- deactivated until I find an old copy of jquery tools
+    // $(".help, img[title]").tooltip({position: 'top right', opacity: 0.7});
     
     // restrict numInput fields to numeric input only
     $(".numInput").forceNumeric();
