@@ -420,7 +420,10 @@ function build_and_save_cache() {
     var str;
     build_cache("input");
     str = JSON.stringify(cells_cache);
-    if (str == undefined) return;
+    if (str == undefined) {
+        alert("error converting cells_cache to cookie storage");
+        return;
+    }
     // now store in cookie
 //    $.cookie('cells_cache', str, {expires: 14});
     save_cookie_chunks('cells', str);
