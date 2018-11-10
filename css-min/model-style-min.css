@@ -1,0 +1,17 @@
+@charset 'UTF-8';/*!
+ * UI-SUI CSS v1.0b
+ * http://www.sociomedia.co.jp/
+ *
+ * Copyright (c) 2009 Sociomedia Inc.
+ * Licensed under GPL.
+ * http://ixedit.com/license/
+
+ * Date: 2009-12-24
+ *
+ * This CSS is based on the jQuery UI CSS Framework.
+ * http://jqueryui.com/
+ *//*!
+* jQuery UI CSS Framework
+* Copyright (c) 2009 http://jqueryui.com/about
+* Dual licensed under the MIT and GPL licenses.
+*/.ui-accordion-header{font-size:130%}td{font-family:verdana;font-size:12px}table{border-collapse:collapse}table,th,tr{width:100%;border:1px solid black}td{padding:5px}.hidden{display:none}.loadingcontainer{position:absolute;top:50%;margin-top:-40px;left:50%;width:100%}.loadingcontent{width:120px;margin-left:auto;margin-right:auto;height:80px}td.data{background-color:#ac8;color:#000}td.select{background-color:#ac8;color:#000}td.numCalc{background-color:#ddd;color:#000;border:0}td.label{border:0}td.white{background-color:white}td.yellow{background-color:yellow}td.orange{background-color:orange}td.largeBold{font-weight:bold;font-size:14px}td.smallBold{font-weight:bold;font-size:10px}td.normalBold{font-weight:bold;font-size:12px}td.normalText{font-weight:normal;font-size:12px}td.col2-1{width:80%}td.col2-2{width:20%}td.col4-1{width:55%}td.col4-2{width:10%}td.col4-3{width:15%;padding-left:15px}td.col4-4{width:10%}td.sum1{width:55%}td.sum2{width:15%}input.bigNum{width:80px}input.smallNum{width:50px}input.percent{width:50px}input.userInput{width:400px;font-family:verdana;font-size:16px}.uiSelect{position:relative;height:60px}.uiSelect .box{position:absolute;width:30%;background-color:#fff}.uiSelect .box label{width:80px}.uiSelect .box .value{width:220px}.tooltip{display:none;background-color:#ffa;border:1px solid #cc9;padding:3px;font-size:16px;-moz-box-shadow:2px 2px 11px #666;-webkit-box-shadow:2px 2px 11px #666}
