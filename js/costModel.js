@@ -420,7 +420,10 @@ function build_and_save_cache() {
     var str;
     build_cache("input");
     str = JSON.stringify(cells_cache);
-    if (str == undefined) return;
+    if (str == undefined) {
+        alert("error converting cells_cache to cookie storage");
+        return;
+    }
     // now store in cookie
 //    $.cookie('cells_cache', str, {expires: 14});
     save_cookie_chunks('cells', str);
@@ -519,7 +522,8 @@ function setup_part2() {
     });
     
     // activate tooltip
-    $(".help, img[title]").tooltip({position: 'top right', opacity: 0.7});
+    // -- deactivated until I find an old copy of jquery tools
+    // $(".help, img[title]").tooltip({position: 'top right', opacity: 0.7});
     
     // restrict numInput fields to numeric input only
     $(".numInput").forceNumeric();
