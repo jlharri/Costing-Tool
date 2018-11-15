@@ -1,23 +1,8 @@
 /**
- * Created by costModel.
+ * costModel
  * User: jlharri
  * Date: 5/6/11
  * Time: 3:50 PM
- * To change this template use File | Settings | File Templates.
- */
-
-/**
- * UIForm contains the UI model of the form.
- *
- * UIForm Fields: TYPE	ID	TEXT	TEXT_CLASS	INPUT_CLASS	CALCULATION
- *
- * Type : [section numInput Calculation ]
- * id : Unique identifier for field
- * text : free-form text for field
- * text_class : [section numInput Calculation]
- * input_class : [<null> smallNum percent bigNum]
- * calc : string containing calculation for field
- * concat : 
  * 
  */
 
@@ -45,6 +30,7 @@ function show_loading() {
     $('#loading').show();
 }
 
+// Rough class hierarchy: 
 // section
 //   subsectionhdr
 //     subsection
@@ -510,6 +496,7 @@ function CreateUIForm(eId) {
     //    };
 
     hide_loading();
+    $('#printbtn').show();
     setTimeout(setup_part2, 500);
     return;
 }

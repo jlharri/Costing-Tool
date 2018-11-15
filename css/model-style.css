@@ -64,18 +64,25 @@ td.rowgap {
 */
 
 .loadingcontainer {
-    position: absolute;
-    top: 50%;
-    margin-top: -40px;
-    left: 50%;
-    width:100%;
+    margin: auto;
+    padding: 10px;
+    width: 100%;   
+    background: url('../images/loading_background.png'); 
+    background-size: 80%;
+    background-repeat: no-repeat;
+    opacity:0.35;
+}
+
+.loadingbgnd {
+    width: 30%;
+    height: auto;
+    opacity: 25%;
 }
 
 .loadingcontent {
-    width: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 80px;
+    width: 40%;
+    height: auto;
+    opacity: 1.0;
 }
 
 /*

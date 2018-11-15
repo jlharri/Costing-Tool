@@ -54,13 +54,14 @@
 </head>
 <body>
             <div id="loading" class="loadingcontainer">
-                <div class="loadingcontent">
-                    <p><b>Loading...</b><br><img src="images/loading_animation.gif"><br><b>Please wait.</b></p>
-                </div>
+                <p>
+                    <img class="loadingcontent" src="images/loading_animation.gif">
+                </p>
             </div>
+            
             <form action="#" id="defaultForm">
                 <div id="tabs">
- 		<input type="submit" onclick='window.print();' class="finish" value="Print"/>
+                    <input style="display: none" id="printbtn" type="submit" onclick='window.print();' class="finish" value="Print"/>
                 </div>
             </form><br>
 
