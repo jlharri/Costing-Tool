@@ -1,8 +1,10 @@
 # CostingModel
 
-General-purpose single-page application for cost estimation tools. The tool's layout, fields, and calculcations are defined in JSON and rendered at load time. Printing is supported and the field values are stored in cookies; no back-end database needed. 
+General-purpose single-page application for cost estimating. The form's layout, fields, and spreadsheet calculations are defined in JSON and rendered at load time. Printing is supported and the field values are stored in cookies; no back-end database needed. 
 
 This app was written for health workers in Africa to enter key health parameters and calculate HIV drug doses for pregnant women and mothers.
+
+Demo available at http://www.jerryharris.tech/costtool/
 
 ## Dev note
 The app will run if you local index.html in a browser window. The only feature that won't work is storing values across page loads. Browsers stopped supporting this a few years ago. To get around this, you can run a simple web server on your machine with if you have Python installed. Run one of these from the top directory of Costing Model. 
