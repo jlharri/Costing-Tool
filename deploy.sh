@@ -5,18 +5,23 @@
 
 # cleanup
 cd Published
+echo -n "Removing files..."
 rm -rf *
+echo "Done"
+echo -n "Making directories..."
 mkdir css
 mkdir js
 mkdir js-min
 mkdir images
 mkdir jquery
 mkdir jquery/images
+echo "Done"
 cd ..
 
 # copy files
+echo -n "Copying files..."
 cp index.html Published
-cp favicon.ico Published 
+cp favicon.ico Published/images
 
 cp js/json2.js Published/js
 cp js/clientside_formula.js Published/js
@@ -36,6 +41,7 @@ cp css/jquery.linkselect.css Published/css
 cp images/small_question_mark.jpg Published/images
 cp images/loading_animation.gif Published/images
 cp images/loading_background.png Published/images
+cp images/linkselect_bkgrd.png Published/images
 
 cp jquery/jquery.min.js Published/jquery
 cp jquery/jquery-ui.min.js Published/jquery
@@ -46,3 +52,9 @@ cp jquery/images/ui-bg_glass_75_e6e6e6_1x400.png Published/jquery/images
 cp jquery/images/ui-icons_888888_256x240.png Published/jquery/images
 cp jquery/images/ui-bg_glass_65_ffffff_1x400.png Published/jquery/images
 cp jquery/images/ui-icons_454545_256x240.png Published/jquery/images
+
+echo "Done"
+
+cd Published
+echo "Status: `find . | wc -l` files published"
+cd ..
